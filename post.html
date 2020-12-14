@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍴 Food Share - order🍴</title>
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="mobile-container">
+        <div class="image-holder">
+            <img src="foodsharing.jpg" alt="Food Share" style="width: 100%; height:98px;">
+            <p class="head-text">Food Share</p>
+        </div>
+
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <a href="#home" class="active"></a>
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="post.html">Post</a>
+                <a href="buy.html">Buy</a>
+                <a href="dishdetail.html">Dish Details</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <br>
+        </div>
+
+        <div class="flex-item-column">
+            <div class="flex-item-row">
+                <div class="post-image-container">
+                    <img src="chicken-shawarma.jpg" width="140px" height="100px" alt="Chicken Shawarma">
+                </div>
+                <div class="flex-item-column">
+                    <p class="flex-item-row">
+                        <span id="btn-veg" class="round-btn text-color-blue" onClick="toggleSelection1()"><br>Veg</span>
+                        <span id="btn-nonveg" class="round-btn text-color-blue round-btn-line-size" onClick="toggleSelection2()">Non Veg</span>
+                        <span id="btn-vegan" class="round-btn text-color-blue" onClick="toggleSelection3()"><br>Vegan</span>
+                    </p>
+                    <div class="flex-item-row">
+                        <p class="flex-item-column text-color-green">
+                            <span><input type="checkbox" id="offer" class="text-color-green" name="offer" value="Offer">
+                                <label for="offer" class="text-color-green"> Offer</label></span>
+                            <span><input type="checkbox" id="need" name="need"  class="text-color-green" value="Need">
+                                <label for="need" class="text-color-green">Need</label></span>
+                        </p>
+                        <p class="flex-item-column text-color-orange">
+                            <span><input type="checkbox" id="pickup" name="pickup"  class="text-color-orange" value="pickup">
+                                <label for="pickup" class="text-color-orange" > Pick-Up</label></span>
+                            <span><input type="checkbox" id="delivery"  class="text-color-orange" name="delivery" value="delivery">
+                                <label for="delivery" class="text-color-orange" >Delivery</label></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item-row">
+                <p class="flex-item-column grey-border">
+                    <label for="origin"> Origin <input type="text" id="origin" name="origin" value=""></label>
+                    <label for="fooditem"> Food Item <input type="text" id="fooditem" name="fooditem" value=""></label>
+                    <label for="description"> Description<input type="text" id="description" name="description"
+                            value=""></label>
+                </p>
+                <p class="flex-item-column grey-border">
+                    <label for="ingredients"> Ingredients<textarea id="ingredients" class="fix-height"
+                            name="ingredients" rows="3" cols="19" value=""></textarea></label>
+                    <label for="allergy"> Allergy Contents<textarea id="allergy" class="fix-height" name="allergy"
+                            rows="3" cols="19" value=""></textarea></label>
+                </p>
+            </div>
+            <div class="flex-item-row">
+                <p class="flex-item-column grey-border">
+                    <label for="value"> Value <input type="number" id="value" name="value" value=""></label>
+                    <label for="date"> Date <input type="date" id="date" name="date" value=""></label>
+                    <label for="time">Time <input type="time" id="time" name="time" value=""></label>
+                </p>
+                <p class="flex-item-column grey-border">
+                    <label for="address"> Address<textarea id="address" class="fix-height" name="address" rows="3"
+                            cols="19" value=""></textarea></label>
+                    <label for="phone"> Phone <input type="tel" id="phone" name="phone" value=""></label>
+                </p>
+            </div>
+            <div class="flex-item-row">
+                <span><button class="btn" onclick="saveList()">Post</button></span>
+                <span><button class="btn">Cancel</button></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
