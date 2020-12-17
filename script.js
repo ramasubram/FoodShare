@@ -122,6 +122,9 @@ function saveOrder() {
 }
 
 function loadList() {
+  var x = document.getElementById("about");
+  x.style.display = "none";
+
   const container = document.getElementById('root');
 
   var detailsObj = JSON.parse(localStorage.getItem("allorders"));
