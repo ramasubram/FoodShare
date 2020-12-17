@@ -11,7 +11,7 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="loadSelected()">
     <div class="mobile-container">
         <div class="image-holder">
             <img src="foodsharing.jpg" alt="Food Share" style="width: 100%; height:98px;">
@@ -25,7 +25,7 @@
             <div id="myLinks">
                 <a href="index.html">Home</a>
                 <a href="post.html">Post</a>
-                <a href="buy.html">Buy</a>
+<!--            <a href="buy.html">Buy</a>-->
                 <a href="dishdetail.html">Dish Details</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -37,16 +37,17 @@
         <div>
             <div class="buy-item">
                 <div class="buy-image-container">
-                    <img src="chicken-shawarma.jpg" width="140px" height="100px" alt="Chicken Shawarma">
+                    <img  id="img2"  width="140px" height="100px" alt="">
                 </div>
                 <div class="buy-text-container">
-                    <p class="text-color-red"><b>Chicken Shawarma</b></p>
+                    <p class="text-color-red"  id="fooditem1"><b></b></p>
                     <p><label for="qty">Quantity</label> <input type="text" id="qty" name="qty"></p>
                     <p><label for="name">Name</label> <input type="text" id="name" name="name"></p>
                     <p><label for="email">Email</label> <input type="email" id="email" name="email"></p>
                     <p><label for="phone">Phone</label> <input type="tel" id="phone" name="phone"></p>
                     <p class="text-color-purple sizing">Order Confirmation will be communicated by the seller</p>
-                    <span><button class="btn">OK</button><button class="btn">Cancel</button></span>
+                    <span><button class="btn" onclick="saveOrder()">OK</button>
+                    <span><button class="btn"><a href="index.html">Cancel</a></button></span>
                 </div>
             </div>
         </div>

@@ -25,7 +25,7 @@
             <div id="myLinks">
                 <a href="index.html">Home</a>
                 <a href="post.html">Post</a>
-                <a href="buy.html">Buy</a>
+<!--            <a href="buy.html">Buy</a>-->
                 <a href="dishdetail.html">Dish Details</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -38,7 +38,9 @@
         <div class="flex-item-column">
             <div class="flex-item-row">
                 <div class="post-image-container">
-                    <img src="chicken-shawarma.jpg" width="140px" height="100px" alt="Chicken Shawarma">
+                    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                    <p><label for="file" style="cursor: pointer; color:red; line-height: 3px; font-size: small;" >upload Image</label></p>
+                    <p><img id="output" width="140px"  height="80px"/></p>
                 </div>
                 <div class="flex-item-column">
                     <p class="flex-item-row">
@@ -48,15 +50,15 @@
                     </p>
                     <div class="flex-item-row">
                         <p class="flex-item-column text-color-green">
-                            <span><input type="checkbox" id="offer" class="text-color-green" name="offer" value="Offer">
+                            <span><input type="radio" id="offer" class="text-color-green" name="offerneed" value="Offer">
                                 <label for="offer" class="text-color-green"> Offer</label></span>
-                            <span><input type="checkbox" id="need" name="need"  class="text-color-green" value="Need">
+                            <span><input type="radio" id="need" name="offerneed"  class="text-color-green" value="Need">
                                 <label for="need" class="text-color-green">Need</label></span>
                         </p>
                         <p class="flex-item-column text-color-orange">
-                            <span><input type="checkbox" id="pickup" name="pickup"  class="text-color-orange" value="pickup">
+                            <span><input type="checkbox" id="pickup" name="deliverymode"  class="text-color-orange" value="pickup">
                                 <label for="pickup" class="text-color-orange" > Pick-Up</label></span>
-                            <span><input type="checkbox" id="delivery"  class="text-color-orange" name="delivery" value="delivery">
+                            <span><input type="checkbox" id="delivery" name="deliverymode" class="text-color-orange"value="delivery">
                                 <label for="delivery" class="text-color-orange" >Delivery</label></span>
                         </p>
                     </div>
@@ -90,7 +92,7 @@
             </div>
             <div class="flex-item-row">
                 <span><button class="btn" onclick="saveList()">Post</button></span>
-                <span><button class="btn">Cancel</button></span>
+                <span><button class="btn"><a href="index.html">Cancel</a></button></span>
             </div>
         </div>
     </div>

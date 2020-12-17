@@ -12,6 +12,10 @@ p {
     margin-block-start: 10px;
     margin-block-end: 10px;
 }
+
+a {
+    text-decoration: none;
+}
 label {
     color: blue;
     text-align: left;
@@ -109,8 +113,7 @@ textarea {
 }
 
 .container-items {
-    border: 1px solid yellow;
-    border-radius: 3px;
+    display: block;
     background-color: white;
     color: black;
     margin: 5px;
@@ -135,15 +138,13 @@ textarea {
     border: 1px solid lightgrey;
     width: 140px;
     height: 100px;
+    text-align: center;
 }
-.text-container, .buy-text-container {
+.buy-text-container {
     padding: 5px;
     font-family: Purple Purse;
     font-size: small;
     border-top: 0;
-}
-.text-container{
-    display: inline-block;
 }
 .buy-text-container {
     font-size: medium;
@@ -160,9 +161,6 @@ textarea {
 .buy-text-container label {
     float: left;
     width: 80px;
-}
-.text-container p {
-    line-height: 7px;
 }
 .buy-text-container p {
     margin-block-start: 5px;
@@ -204,7 +202,6 @@ textarea {
 
 .buy-item {
     height: 70%;
-    border: 1px solid yellow;
     border-radius: 3px;
     background-color: white;
     color: black;
@@ -283,14 +280,32 @@ textarea {
 .border-around-content {
     border: 1px solid lightgray;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     width: 120px;
     height: 30px;
     font-size: medium;
-    text-align: center;
+    text-align: left;
+    line-height: 6px;
 }
 
 .fix-height {
     height: 50px;
     flex-wrap: wrap;
+}
+.grid-container {
+    border: 1px solid greenyellow;
+    margin: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: medium;
+    text-align: left;
+    padding: 1px;
+}
+.item1 {
+    grid-row: 1 / 4;
+    padding: 2px 1px;
 }

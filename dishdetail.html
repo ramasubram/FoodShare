@@ -11,7 +11,7 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="loadListDetail()">
     <div class="mobile-container">
         <div class="image-holder">
             <img src="foodsharing.jpg" alt="Food Share" style="width: 100%; height:98px;">
@@ -25,7 +25,7 @@
             <div id="myLinks">
                 <a href="index.html">Home</a>
                 <a href="post.html">Post</a>
-                <a href="buy.html">Buy</a>
+<!--            <a href="buy.html">Buy</a>-->
                 <a href="dishdetail.html">Dish Details</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -35,49 +35,55 @@
             <br>
         </div>
 
-        <div>
+        <div id="root">
             <div class="container-items">
-                <div class="image-container">
-                    <img src="chicken-shawarma.jpg" width="70px" height="50px" alt="Chicken Shawarma">
+                <div class="grid-container">
+                    <div class="item1">
+                        <img id="img1" width="70px" height="50px" alt="">
+                    </div>
+                    <div class="grid-item text-color-red"><b>Dish Name</b></div>
+                    <div class="grid-item text-color-red" id="fooditem"></div>
+                    <div class="grid-item text-color-orange">Dish Description</div>
+                    <div class="grid-item text-color-orange" id="description"></div>
+                    <div class="grid-item text-color-blue" id="VNVV"></div>
+                    <div class="grid-item text-color-purple" id="origin"></div>
                 </div>
-                <div class="text-container">
-                    <p><label for="name">Dish Name</label>
-                        <span class="add-padding text-color-purple" name="name">Chicken Shawarma</span></p>
-                    <p><label for="description">Dish Description</label>
-                        <span class="add-padding text-color-purple" name="description">Chicken Shawarma</span></p>
-                    <p><span class="text-color-red"><b>NonVeg</b></span>
-                        <span class="add-padding text-color-blue">Arabian</span></p>
-                </div>
-                <hr style="height:1px;border-width:0;color:gray;background-color:gray">
-                <div class="text-container">
-                    <p><span class="text-color-blue add-padding ">Order Details</span>
-                        <span class="add-padding2 text-color-green">40 kr</span>
-                        <span class="add-padding2 text-color-green">Cooking</span></p>
+                <br>
+                <div class="flex-item-column">
                     <div class="flex-item-row">
                         <span><label for="ingredients">Major Ingredients</label>
-                            <p name="ingredients" class="border-around-content text-color-purple">ingredients</p>
+                            <textarea name="ingredients" class="border-around-content text-color-purple" id="ingredients">
+                                ingredients</textarea>
                         </span>
-                        <span class="add-padding"><label for="allergy">Allergy Contents</label>
-                            <p name="allergy" class="border-around-content text-color-purple">
-                                allergy contents<br> <br>(ex nuts/wheat)</p>
+                        <span class="add-padding2"><label for="allergy">Allergy Contents</label>
+                            <textarea name="allergy" class="border-around-content text-color-purple" id="allergy"></textarea>
                         </span>
                     </div>
+                    <p><span class="text-color-blue add-padding">Price</span>
+                        <span class="text-color-green" id="value"></span>
+                        <span class="text-color-green" id="status"></span>
+                    </p>
                 </div>
                 <div class="flex-item-row">
-                    <span><button class="btn"> <b>◄</b> </button></span>
+                    <span><button class="btn" onclick="prevDetail()"> <b>◄</b> </button></span>
 
                     <div class="flex-item">
-                        <span class="text-color-blue">Pick-Up/<s>Delivery</s> on</span>
+                        <span class="text-color-blue" id="deliverymode"> on</span>
                         <p class="text-color-purple">
-                        <span class="border-around-content">Date</span>
-                        <span class="add-padding2 border-around-content">Time</span></p>
+                            <span class="border-around-content" id="date">Date</span>
+                            <span class="add-padding2 border-around-content" id="time">Time</span>
+                        </p>
 
                         <span class="text-color-blue">at</span>
-                        <p class="text-color-purple border-around-content">address</p>
-
-                        <span><button class="btn">Buy</button></span>
+                        <p class="text-color-purple border-around-content" id="address">address</p>
                     </div>
-                    <span><button class="btn "><b>►</b></button>
+                    <span><button class="btn" onclick="nextDetail()"><b>►</b></button>
+                </div>
+                <div class="flex-item-column">
+                    <div class="flex-item-row">
+                        <span><button class="btn"><a href="buy.html">Buy</a></button></span>
+                        <span><button class="btn"><a href="index.html">Cancel</a></button></span>
+                    </div>
                 </div>
             </div>
         </div>
