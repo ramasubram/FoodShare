@@ -86,6 +86,7 @@ function saveList() {
   console.log(detailsObj);
   localStorage.setItem("allorders", (JSON.stringify(detailsObj)));
   alert("Successfull Post. Thanks for using Food Share!");
+  
   window.location.href = "post.html";
 }
 
